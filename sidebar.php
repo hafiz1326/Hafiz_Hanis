@@ -48,8 +48,7 @@ Master Data
 <a href="?modul=pelanggan" class="nav-link text-dark text- decoration-none <?= $modul=='pelanggan'?'active':''; ?>">Pelanggan</a>
 </li>
 <li class="nav-item">
-<a href="?modul barang" class="nav-link text-dark text-decoration-
-none <?= $modul=='barang'?'active':''; ?>">Barang</a>
+<a href="?modul barang" class="nav-link text-dark text- decoration-none <?= $modul=='barang'?'active':''; ?>">Barang</a>
 </li>
 <li class="nav-item">
 <a href="?modul=suplier" class="nav-link text-dark text-decoration-

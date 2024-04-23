@@ -1,4 +1,4 @@
-<div class="card mb-3">
+ <div class="card mb-3">
 <div class="card-body">
 <form action="" method="post">
 <div class="row mb-3">
@@ -11,7 +11,7 @@
 <input type="date" class="form-control" name="tanggal">
 </div>
 </div>
-<div class="row mb-3">
+<div class="row mb-3"> 
 <div class="col-md-6">
 <label for="total" class="form-label">Total</label>
 <div class="input-group">
