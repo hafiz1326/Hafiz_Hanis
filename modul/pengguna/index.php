@@ -63,25 +63,20 @@ bs-toggle="modal">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-<h5 class="modal-title" id="editPengguna Label">Edit
-Pengguna</h5>
-<button type="button" class="btn-close" data-bs-
-dismiss="modal" aria-label="Close"></button>
+<h5 class="modal-title" id="editPengguna Label">Edit Pengguna</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
 <div class="mb-3">
-<label for="username" class="form-
-label">Username</label>
-<input type="text" class="form-control"
-name="username" value="admin">
+<label for="username" class="form-label">Username</label>
+<input type="text" class="form-control" name="username" value="admin">
 </div>
 <div class="mb-3">
 <label for="password" class="form-
 label">Password</label>
 <input type="text" class="form-control"
 name="password">
-<span class="form-text text-muted">Kosongkan jika
-tidak ingin mengganti password</span>
+<span class="form-text text-muted">Kosongkan jika tidak ingin mengganti password</span>
 </div>
 <div class="mb-3">
 <label for="level" class="form-label">Level</label>
@@ -129,3 +124,4 @@ data-bs-toggle="modal">
 </div>
 </div>
 </div>
+

@@ -136,5 +136,3 @@ bs-toggle="modal">
 </div>
 </div>
 
-
->>>>>>> 10f82d5ba91414fad70bf130a58aecf266e363e4
