@@ -70,8 +70,7 @@ data-bs-toggle="modal">
 <!-- Modal -->
 <div class="modal fade" id="editAkun<?= $data['id'] ?>" tabindex="-1"
 aria-labelledby="exampleModalLabel" aria-hidden="true">
-<form action="modul/akun/aksi_akun.php?act=update&id=<?= $data['id'] ?
->" method="post">
+<form action="modul/akun/aksi_akun.php?act=update&id=<?= $data['id'] ?>" method="post">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
