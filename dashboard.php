@@ -25,15 +25,11 @@ include_once('sidebar.php');
 <div class="text-end p-3">
 <div class="dropdown">
 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-<i class="bi bi-person-circle"></i>
-Administrator
-</button>
+<i class="bi bi-person-circle"></i>Administrator</button>
 <ul class="dropdown-menu">
 <li>
 <a class="dropdown-item" href="?modul=profile">
-<i class="bi bi-person-badge-fill"></i>
-Profile
-</a>
+<i class="bi bi-person-badge-fill"></i>Profile</a>
 </li>
 <li>
 <a class="dropdown-item" href="logout.php">
@@ -49,29 +45,10 @@ Logout
 include_once('media.php');
 ?>
 </div>
-</div>
+</div> 
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
 </body>
 </html>
-<?php
-session_start();
-if (!isset($_SESSION['username'])) {
-header('location: index.php');
-}else{
-include_once('koneksi.php');
-?>
-<!doctype html>
-<html lang="en">
-.<!-- Baris program yang lain -->
-. <button class="btn btn-secondary dropdown-toggle" type="button" data-bs- toggle="dropdown" aria-expanded="false">
-<i class="bi bi-person-circle"></i>
--. <!-- Ganti Administrator menjadi baris program dibawah ini -->
-<?php echo $_SESSION['nama_lengkap']; ?>
-</button>
-<!-- Baris program yang lain
-</html>
-<?php
-}
-?>
+
