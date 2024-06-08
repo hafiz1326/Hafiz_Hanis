@@ -27,11 +27,9 @@
 <button type="submit" class="btn btn-primary">Simpan</button>
 </div>
 </form>
-- </div>
--</div>
-- <div class="card">
--
--
+ </div>
+</div>
+<div class="card">
 <div class="card-header">
 <h3>Data Akun</h3>
 </div>
@@ -58,8 +56,7 @@
 <i class="bi bi-pencil-square text-success"></i>
 </a>
 <a href="" class="text-decoration-none">
-<i class="bi bi-trash text-danger"></i>
-</a>
+<i class="bi bi-trash text-danger"></i></a>
 </td>
 <!-- Modal -->
 <div class="modal fade" id="editAkun" tabindex="-1" aria-
@@ -67,22 +64,17 @@ labelledby="exampleModalLabel" aria-hidden="true">
 <form action="" method="post">
 <div class="modal-dialog">
 <div class="modal-content">
-<div class="modal-header">
-Data Akun</h1>
-<h1 class="modal-title fs-5" id="exampleModalLabel">Edit
-<button type="button" class="btn-close" data-bs-
+<div class="modal-header">Data Akun</h1>
+<h1 class="modal-title fs-5" id="exampleModalLabel">Edit<button type="button" class="btn-close" data-bs-
 dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
 <div class="mb-3">
-<label class="form-label" for="nama_akun">Nama
-akun</label>
-<input type="text" class="form-control" name="nama_akun"
-value="Kas">
+<label class="form-label" for="nama_akun">Nama akun</label>
+<input type="text" class="form-control" name="nama_akun"value="Kas">
 </div>
 <div class="mb-3">
-<label class="form-label" for="jenis_akun">Jenis
-akun</label>
+<label class="form-label" for="jenis_akun">Jenis akun</label>
 <input type="text" class="form-control"
 name="jenis_akun" value="Aset">
 </div>
@@ -96,10 +88,8 @@ saldo</label>
 </div>
 </div>
 <div class="modal-footer">
-<button type="button" class="btn btn-secondary" data-bs-
-dismiss="modal">Close</button>
-<button type="submit" class="btn btn-
-primary">Simpan</button>
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Simpan</button>
 </div>
 </div>
 </div>
