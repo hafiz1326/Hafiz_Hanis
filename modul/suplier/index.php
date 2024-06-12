@@ -72,7 +72,7 @@ while($data = mysqli_fetch_array($exec)) {
 <tr>
 <td><?= $no++ ?></td>
 <td><?= $data['nama_supplier'] ?></td>
-<td><?= $data['alamat')] ?></td>
+<td><?= $data['alamat'] ?></td>
 <td><?= $data['telp'] ?></td>
 <td><?= $data['email'] ?></td>
 <td>
