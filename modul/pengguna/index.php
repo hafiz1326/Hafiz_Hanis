@@ -1,3 +1,7 @@
+<form action="modul/pengguna/aksi_pengguna.php?act=insert" method="post">
+<!-- baris program yang lain-->
+</form>
+
 <div class="card">
 <div class="card-body">
 <div class="row">
