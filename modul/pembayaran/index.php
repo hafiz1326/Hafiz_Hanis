@@ -1,4 +1,8 @@
- <div class="card mb-3">
+<form action="modul/pembayaran/aksi_pembayaran.php?act=insert" method="post">
+<!-- baris program yang lain -->
+</form>
+
+<div class="card mb-3">
 <div class="card-body">
 <form action="" method="post">
 <div class="row mb-3">
@@ -25,10 +29,23 @@
 </div>
 </div>
 <hr class="text-secondary">
-<div class="text-end">
+<div class="row">
+<div class="d-flex">
+<span class="me-auto text-gray">
+<?php
+if(isset($_SESSION['pesan'])){
+echo $_SESSION['pesan'];
+unset($_SESSION['pesan']);
+}
+?>
+</span>
 <button type="reset" class="btn btn-secondary">Reset</button>
-<button type="submit" class="btn btn-primary">Simpan</button>
+<button type="submit" name="submit" class="btn btn-
+primary">Simpan</button>
 </div>
+</div>
+
+
 </form>
 </div>
 </div>
