@@ -1,4 +1,3 @@
-
 <div class="card mb-3">
 <div class="card-body">
 <form action="" method="post">
@@ -87,20 +86,18 @@ for="nama_barang">Barang</label>
 name="nama_barang" value="Laptop ASUS">
 </div>
 <div class="mb-3">
-<label class="form-label" for="harga_beli">Harga
-beli</label>
+<label class="form-label" for="harga_beli">Harga beli</label>
 <input type="number" class="form-control"
 name="harga_beli" value="10000000">
 </div>
 <div class="mb-3">
-<label class="form-label" for="harga_jual">Harga
-jual</label>
+<label class="form-label" for="harga_jual">Harga jual</label>
 <input type="number" class="form-control"
 name="harga_jual" value="12000000">
 </div>
 <div class="mb-3">
 <label class="form-label" for="stok">Stok</label>
-value="5">
+<value="5">
 <input type="number" class="form-control" name="stok"
 </div>
 </div>
@@ -135,4 +132,5 @@ bs-toggle="modal">
 </div>
 </div>
 </div>
+
 
