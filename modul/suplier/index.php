@@ -1,3 +1,7 @@
+<form action="modul/suplier/aksi_suplier.php?act=insert" method="post">
+<!-- baris program yang lain -->
+</form>
+
 <div class="card mb-3">
 <div class="card-body">
 <div class="row">
@@ -22,10 +26,21 @@
 </div>
 <hr>
 <div class="row">
-<div class="col text-end">
-<button class="btn btn-secondary" type="reset">Reset</button>
-<button class="btn btn-primary" type="submit">Simpan</button>
+<div class="d-flex">
+<span class="me-auto text-gray">
+<?php
+if(isset($_SESSION['pesan'])){
+echo $_SESSION['pesan'];
+unset($_SESSION['pesan']);
+}
+?>
+</span>
+<button type="reset" class="btn btn-secondary">Reset</button>
+<button type="submit" name="submit" class="btn btn-
+primary">Simpan</button>
 </div>
+ </div>
+
 </div>
 </div>
 </div>
