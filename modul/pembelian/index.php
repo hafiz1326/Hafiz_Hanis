@@ -96,8 +96,8 @@ $no++;
 <td><?= $row['tanggal'] ?></td>
 <td><?= $row['nama_supplier'] ?></td>
 <td><?= $row['jumlah'] ?></td>
-<td><?= "Rp. number_format($row['harga'], 2, ',', '.' ); ?></td>
-<td><?= "Rp. number_format($row['total'], 2, ',', '.'); ?></td>
+<td><?= "Rp. " . number_format($row['harga'], 2, ',', '.' ); ?></td>
+<td><?= "Rp. " . number_format($row['total'], 2, ',', '.'); ?></td>
 <td><?= $row['keterangan'] ?></td>
 <td>
 <a href="#editPembelian<?= $row['id_pembelian'] ?>" class="text-
