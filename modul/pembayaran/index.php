@@ -67,92 +67,79 @@ primary">Simpan</button>
 </tr>
 </thead>
 <tbody>
+<?php
+$query = mysqli_query($koneksi, "SELECT * FROM tbl_pembayaran"); $no = 0;
+while($row = mysqli_fetch_array($query)){
+$no++;
+?>
 <tr>
-<td>1</td>
-<td>BY110324</td>
-<td>11/03/2024</td>
-<td>Rp. 1.000.000,-</td>
-<td>Pembayaran tagihan indihome</td>
+<td><?= $no ?></td>
+<td><?= $row['invoice')] ?></td>
+<td><?= $row['tanggal'] ?></td>
+<td><?= "Rp. number_format($row['total'], 2, ',', '.'); ?></td> "
+<td><?= $row['keterangan'] ?></td>
 <td>
-<a href="#editPembayaran" class="text-decoration-none" data-
-bs-toggle="modal">
+<a href="#editPembayaran<?= $row['id'] ?>" class="text-decoration- none" data-bs-toggle="modal">
 <i class="bi bi-pencil-square text-success"></i>
 </a>
-<a href="" class="text-decoration-none">
+<a href="modul/pembayaran/aksi_pembayaran.php?act=delete&id=<?= $row['id']; ?>" class="text-decoration-none">
 <i class="bi bi-trash text-danger"></i>
 </a>
 </td>
 <!-- Modal -->
-<div class="modal fade" id="editPembayaran" tabindex="-1" aria-
-labelledby="exampleModalLabel" aria-hidden="true">
-<form action="" method="post">
+<div class="modal fade" id="editPembayaran<?= $row['id'] ?>" tabindex="- 1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form action="modul/pembayaran/aksi_pembayaran.php?act=update&id=<?=
+$row['id'] ?>" method="post">
 <div class="modal-dialog modal-lg">
 <div class="modal-content">
 <div class="modal-header">
-<h1 class="modal-title fs-5"
-id="exampleModalLabel">Edit Data Pembayaran</h1>
-<button type="button" class="btn-close" data-bs-
-dismiss="modal" aria-label="Close"></button>
+<h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data
+Pembayaran</h1>
+<button type="button" class="btn-close" data-bs- dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
 <div class="row mb-3">
 <div class="col-md-6">
-<label for="invoice" class="form-
-label">Invoice</label>
-<input type="text" class="form-control"
-name="invoice" value="BY110324" disabled>
+<label for="invoice" class="form-label">Invoice</label>
+<input type="text" class="form-control" name="invoice"
+value="<?= $row['invoice'] ?>" readonly>
 </div>
 <div class="col-md-6">
-<label for="tanggal" class="form-
-label">Tanggal</label>
-<input type="date" class="form-control"
-name="tanggal" value="2024-03-11">
+<label for="tanggal" class="form-label">Tanggal</label>
+<input type="date" class="form-control" name="tanggal"
+value="<?= $row['tanggal'] ?>">
 </div>
 </div>
 <div class="row mb-3">
 <div class="col-md-6">
-<label for="total" class="form-
-label">Total</label>
+<label for="total" class="form-label">Total</label>
 <div class="input-group">
 <span class="input-group-text">Rp.</span>
-<input type="number" class="form-control"
-name="total" value="1000000">
+<input type="number" class="form-control" name="total"
+value="<?= $row['total'] ?>">
 </div>
 </div>
 <div class="col-md-6">
-label">Keterangan</label>
 <label for="keterangan" class="form-
-<input type="text" class="form-control"
-name="keterangan" value="Pembayaran tagihan indihome">
+label">Keterangan</label>
+<input type="text" class="form-control" name="keterangan"
+value="<?= $row['keterangan'] ?>">
 </div>
 </div>
 </div>
 <div class="modal-footer">
-<button type="button" class="btn btn-secondary"
-data-bs-dismiss="modal">Close</button>
-<button type="submit" class="btn btn-
-primary">Simpan</button>
+<button type="button" class="btn btn-secondary" data-bs-
+dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Simpan</button>
 </div>
 </div>
 </div>
 </form>
 </div>
 </tr>
-<tr>
-<td>2</td>
-<td>BY100324</td>
-<td>10/03/2024</td>
-<td>Rp. 900.000,-</td>
-<td>Pembayaran tagihan listrik</td>
-<td>
-<a href="" class="text-decoration-none">
-</a>
-<i class="bi bi-pencil-square text-success"></i>
-<a href="" class="text-decoration-none">
-<i class="bi bi-trash text-danger"></i>
-</a>
-</td>
-</tr>
+<?php
+}
+?>
 </tbody>
 </table>
 </div>
