@@ -68,15 +68,16 @@ primary">Simpan</button>
 </thead>
 <tbody>
 <?php
-$query = mysqli_query($koneksi, "SELECT * FROM tbl_pembayaran"); $no = 0;
+$query = mysqli_query($koneksi, "SELECT * FROM tbl_pembayaran");
+$no = 0;
 while($row = mysqli_fetch_array($query)){
 $no++;
 ?>
 <tr>
 <td><?= $no ?></td>
-<td><?= $row['invoice')] ?></td>
+<td><?= $row['invoice'] ?></td>
 <td><?= $row['tanggal'] ?></td>
-<td><?= "Rp. number_format($row['total'], 2, ',', '.'); ?></td> "
+<td><?= "Rp. " . number_format($row['total'], 2, ',', '.'); ?></td> "
 <td><?= $row['keterangan'] ?></td>
 <td>
 <a href="#editPembayaran<?= $row['id'] ?>" class="text-decoration- none" data-bs-toggle="modal">

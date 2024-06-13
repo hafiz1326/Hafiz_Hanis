@@ -104,7 +104,7 @@ $no++;
 decoration-none" data-bs-toggle="modal">
 <i class="bi bi-pencil-square text-success"></i>
 </a>
-<a href="modul/pembelian/aksi_pembelian.php?act=delete&id=<?= $row['id_pembelian'); ?>" class="text-decoration-none">
+<a href="modul/pembelian/aksi_pembelian.php?act=delete&id=<?= $row['id_pembelian']; ?>" class="text-decoration-none">
 <i class="bi bi-trash text-danger"></i>
 </a>
 </td>
