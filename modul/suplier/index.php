@@ -132,10 +132,10 @@ changes</button>
 </tr>
 <tr>
 <td>2</td>
-<td>PT. Abadi</td>
-<td>J1. Damai</td>
-<td>08133456789</td>
-<td>Damaiabadit@example.com</td>
+<td>PT. Pelangi</td>
+<td>J1. Suka Maju</td>
+<td>081334566541</td>
+<td>PelangiSukaMaju@example.com</td>
 <td>
 <a href="#editSuplier" class="text-decoration-none"
 data-bs-toggle="modal">
