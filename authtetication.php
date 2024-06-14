@@ -24,3 +24,4 @@ $_SESSION['pesan']="username atau password tidak valid!!!"; header('location:ind
 }else{
 header('location:index.php');
 }
+?>
