@@ -1,9 +1,4 @@
-<?php
-$query = "SELECT * FROM tbl_pengguna WHERE username='$_SESSION[username]'";
-$exec = mysqli_query($koneksi, $query);
-$data = mysqli_fetch_array($exec);
-?>
- <div class="card mb-3">
+<div class="card mb-3">
 <div class="card-body">
  <form action="modul/profile/aksi_profile.php" method="post">
 <div class="row">
