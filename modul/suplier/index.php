@@ -1,7 +1,27 @@
-<form action="modul/suplier/aksi_suplier.php?act=insert" method="post">
-<!-- baris program yang lain -->
-</form>
-
+<div class="card">
+  <div class="card-header">
+    <h3>Data Supplier</h3>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nama Supplier</th>
+            <th>Alamat</th>
+            <th>Telp</th>
+            <th>Email</th>
+            <th><i class="bi bi-gear-fill"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data supplier akan ditampilkan di sini -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 <div class="card mb-3">
 <div class="card-body">
 <div class="row">
@@ -26,21 +46,10 @@
 </div>
 <hr>
 <div class="row">
-<div class="d-flex">
-<span class="me-auto text-gray">
-<?php
-if(isset($_SESSION['pesan'])){
-echo $_SESSION['pesan'];
-unset($_SESSION['pesan']);
-}
-?>
-</span>
-<button type="reset" class="btn btn-secondary">Reset</button>
-<button type="submit" name="submit" class="btn btn-
-primary">Simpan</button>
+<div class="col text-end">
+<button class="btn btn-secondary" type="reset">Reset</button>
+<button class="btn btn-primary" type="submit">Simpan</button>
 </div>
- </div>
-
 </div>
 </div>
 </div>
@@ -62,79 +71,81 @@ primary">Simpan</button>
 </tr>
 </thead>
 <tbody>
-<!-- Data Supplier -->
-<?php
-$query = "SELECT * from tbl_supplier";
-$exec = mysqli_query($koneksi, $query);
-$no = 1;
-while($data = mysqli_fetch_array($exec)) {
-?>
 <tr>
-<td><?= $no++ ?></td>
-<td><?= $data['nama_supplier'] ?></td>
-<td><?= $data['alamat'] ?></td>
-<td><?= $data['telp'] ?></td>
-<td><?= $data['email'] ?></td>
+<td>1</td>
+<td>PT. JAYA</td>
+<td>Jl. KARYA</td>
+<td>08213456789</td>
+<td>Jayamakmurt@example.com</td>
 <td>
-<a href="#editSupplier<?= $data['id'] ?>" class="text-
-decoration-none" data-bs-toggle="modal">
+<a href="#editSuplier" class="text-decoration-none" data-bs-
+toggle="modal">
 <i class="bi bi-pencil-square text-success"></i>
 </a>
-<a href="modul/suplier/aksi_suplier.php?act=delete&id=<?=
-$data['id'] ?>" class="text-decoration-none">
+<a href="" class="text-decoration-none">
 <i class="bi bi-trash text-danger"></i>
 </a>
 </td>
-</tr>
-<!-- Modal Edit Supplier -->
-<div class="modal fade" id="editSupplier<?= $data['id'] ?>"
-tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<form action="modul/suplier/aksi_suplier.php?act=update&id=<?=
-$data['id'] ?>" method="post">
+<!-- Modal -->
+<div class="modal fade" id="editSuplier" tabindex="-1" aria-
+labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-<h5 class="modal-title" id="exampleModalLabel">EditSupplier</h5>
-
+Suplier</h5>
+<h5 class="modal-title" id="exampleModalLabel">Edit
 <button type="button" class="btn-close" data-bs-
 dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
 <div class="mb-3">
-<label class="form-label" for="nama_supplier">Nama
-Supplier</label>
+<label class="form-label" for="nama_suplier">Nama
+suplier</label>
 <input type="text" class="form-control"
-name="nama_supplier" value="<?= $data['nama_supplier'] ?>">
+name="nama_suplier" value="PT. ABC">
 </div>
 <div class="mb-3">
 <label class="form-label" for="alamat">Alamat</label>
+value="Jl. ABC">
 <input type="text" class="form-control" name="alamat"
-value="<?= $data['alamat'] ?>">
 </div>
 <div class="mb-3">
 <label class="form-label" for="telp">Telp</label>
 <input type="text" class="form-control" name="telp"
-lue="<?= $data['telp'] ?>">
+value="08123456789">
 </div>
 <div class="mb-3">
 <label class="form-label" for="email">Email</label>
 <input type="text" class="form-control" name="email"
-value="<?= $data['email'] ?>">
+value="oK5Zt@example.com">
 </div>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-bs-
 dismiss="modal">Close</button>
-<button type="submit" class="btn btn-primary">Save
+<button type="button" class="btn btn-primary">Save
 changes</button>
 </div>
 </div>
 </div>
-</form>
 </div>
-<?php
-}
-?>
+</tr>
+<tr>
+<td>2</td>
+<td>PT. Abadi</td>
+<td>J1. Damai</td>
+<td>08133456789</td>
+<td>Damaiabadit@example.com</td>
+<td>
+<a href="#editSuplier" class="text-decoration-none"
+data-bs-toggle="modal">
+<i class="bi bi-pencil-square text-success"></i>
+</a>
+<a href="" class="text-decoration-none">
+<i class="bi bi-trash text-danger"></i>
+</a>
+</td>
+</tr>
 </tbody>
 </table>
 </div>
